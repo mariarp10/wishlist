@@ -1,0 +1,30 @@
+:root {
+  --button-border-radius: 24px;
+  --common-transition: all 0.3s ease-in;
+
+  --white-color: #fff;
+  --black-color: #000;
+  --purple-color: #7b61ff;
+  --pink-color: #db7093;
+  --grey-color-1: #f1f1f1;
+  --grey-color-2: #e2e2e2;
+  --grey-color-3: #eaebec;
+  --grey-color-5: #f5f5f5;
+  --grey-color-7: #e7e7e7;
+  --grey-color-8: #e8e8e8;
+  --grey-color-9: #999;
+  --grey-color-a: #fafafa;
+  --red-color: #f00;
+  --red-bg-color: #ff424d;
+  --green-color: #67db73;
+
+  --text-primary-color: #000;
+  --text-secondary-color: #fff;
+}
+
+.text_type_button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
