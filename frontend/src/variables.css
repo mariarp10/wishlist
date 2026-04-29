@@ -22,6 +22,17 @@
   --text-secondary-color: #fff;
 }
 
+.text_color_red {
+  color: var(--red-color);
+}
+
+.text_type_main {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
 .text_type_button {
   font-style: normal;
   font-weight: 500;
