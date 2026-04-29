@@ -6,7 +6,7 @@
 }
 
 .label {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .input {
@@ -38,7 +38,7 @@ input::placeholder {
 }
 
 .error {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .eye_btn {

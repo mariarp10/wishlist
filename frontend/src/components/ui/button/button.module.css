@@ -21,7 +21,7 @@
 
 .secondary {
   background-color: var(--black-color);
-  color: var(--text-secondary-color)
+  color: var(--text-secondary-color);
 }
 
 .tertiary {

@@ -1,16 +1,27 @@
-import styles from './button.module.css';
+import styles from "./button.module.css";
 
 type UIButtonProps = {
   text: string;
   disabled?: boolean;
   extraClass?: string;
-  type: "primary" | "secondary" | "tertiary"
-}
+  variant: "primary" | "secondary" | "tertiary";
+};
 
-export function UIButton({ text, disabled = false, extraClass = '', type = 'primary' }: UIButtonProps) {
+function UIButton({
+  text,
+  disabled = false,
+  extraClass = "",
+  variant = "primary",
+}: UIButtonProps) {
   return (
-    <button className={`${styles.button} ${styles[type]} ${extraClass}`} disabled={disabled}>
+    <button
+      type="button"
+      className={`${styles.button} ${styles[variant]} ${extraClass}`}
+      disabled={disabled}
+    >
       <span className="text_type_button">{text}</span>
     </button>
-  )
+  );
 }
+
+export default UIButton;

@@ -1,23 +1,39 @@
-import { useState, type InputHTMLAttributes } from 'react'
-import EyeOpen from '@icons/eye-open.svg?react'
-import EyeClosed from '@icons/eye-closed.svg?react'
-import styles from './input.module.css'
+import { useState, type InputHTMLAttributes } from "react";
+import EyeOpen from "@icons/eye-open.svg?react";
+import EyeClosed from "@icons/eye-closed.svg?react";
+import styles from "./input.module.css";
 
 type UIInputProps = {
-  extraClass?: string
-  label?: string
-  extraInputClass?: string
-  errorMessage?: string
+  extraClass?: string;
+  label?: string;
+  extraInputClass?: string;
+  errorMessage?: string;
 } & InputHTMLAttributes<HTMLInputElement>;
 
-export function UIInput({ id, extraClass = '', label = '', extraInputClass = '', errorMessage, type = "text", ...rest }: UIInputProps) {
+function UIInput({
+  id,
+  extraClass = "",
+  label = "",
+  extraInputClass = "",
+  errorMessage,
+  type = "text",
+  ...rest
+}: UIInputProps) {
   const [passwordOpen, setPasswordOpen] = useState(false);
 
-  const customType = type === "password" ? (passwordOpen ? "text" : "password") : type;
+  const isPassword = type === "password";
+
+  let customType = type;
+
+  if (isPassword) {
+    customType = passwordOpen ? "text" : "password";
+  }
 
   const Icon = passwordOpen ? EyeOpen : EyeClosed;
 
-  const handleTogglePassword = () => {setPasswordOpen((prev) => !prev)}
+  const handleTogglePassword = () => {
+    setPasswordOpen((prev) => !prev);
+  };
 
   return (
     <div className={`${styles.content} ${extraClass}`}>
@@ -52,5 +68,7 @@ export function UIInput({ id, extraClass = '', label = '', extraInputClass = '',
         </span>
       )}
     </div>
-  )
+  );
 }
+
+export default UIInput;
