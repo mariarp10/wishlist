@@ -7,10 +7,10 @@ type UIButtonProps = {
   type: "primary" | "secondary" | "tertiary"
 }
 
-export const UIButton = ({ text, disabled = false, extraClass = '', type = 'primary' }: UIButtonProps) => {
+export function UIButton({ text, disabled = false, extraClass = '', type = 'primary' }: UIButtonProps) {
   return (
     <button className={`${styles.button} ${styles[type]} ${extraClass}`} disabled={disabled}>
-      <span className={'text_type_button'}>{text}</span>
+      <span className="text_type_button">{text}</span>
     </button>
   )
 }

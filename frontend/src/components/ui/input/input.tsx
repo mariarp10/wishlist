@@ -1,7 +1,7 @@
-import styles from './input.module.css'
 import { useState, type InputHTMLAttributes } from 'react'
 import EyeOpen from '@icons/eye-open.svg?react'
 import EyeClosed from '@icons/eye-closed.svg?react'
+import styles from './input.module.css'
 
 type UIInputProps = {
   extraClass?: string
@@ -10,7 +10,7 @@ type UIInputProps = {
   errorMessage?: string
 } & InputHTMLAttributes<HTMLInputElement>;
 
-export const UIInput = ({ id, extraClass = '', label = '', extraInputClass = '', errorMessage, type = "text", ...rest }: UIInputProps) => {
+export function UIInput({ id, extraClass = '', label = '', extraInputClass = '', errorMessage, type = "text", ...rest }: UIInputProps) {
   const [passwordOpen, setPasswordOpen] = useState(false);
 
   const customType = type === "password" ? (passwordOpen ? "text" : "password") : type;
